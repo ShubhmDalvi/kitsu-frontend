@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CSS variables for palette */
+:root{
+  --ink: #896C6C;
+  --rose: #E5BEB5;
+  --sand: #EEE6CA;
+  --mint: #F5FAE1;
+}
+
+/* Page background uses palette sand (not white) */
+body { background: var(--sand); }
+
+/* Paper / halftone grain overlay (very subtle) */
+.grain {
+  background-image: radial-gradient(rgba(0,0,0,0.02) 1px, transparent 1px);
+  background-size: 3px 3px;
+}
+
+/* Thin black border motif */
+.border-motif {
+  border: 1px solid #000;
+}
+
+/* Replace the existing .btn block with this one in src/styles/index.css */
+.btn {
+  @apply inline-flex items-center justify-center gap-2 px-3 py-1.5 rounded-md border-motif font-medium;
+  min-width: 3rem;
+  /* allow buttons to shrink on small screens so they don't force the card wider */
+  flex-shrink: 1;
+  /* ensure a button never overflows its container */
+  max-width: 100%;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+  word-break: normal;
+}
+
+.btn:hover { transform: scale(1.03); }
+.btn:active { transform: scale(0.98); }
+
+.btn-primary { background: var(--rose); color: #000; }
+.btn-secondary { background: var(--mint); color: var(--ink); }
+.btn-ghost { background: var(--sand); color: var(--ink); }
+
+/* Remove any leftover CSS keyframe animations that previously targeted blobs/petals.
+   Background motion is now driven by anime.js for better control and low CPU. */
+
+/* Toast animation */
+@keyframes slideFade {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Focus ring */
+:focus {
+  outline: 3px solid rgba(137,108,108,0.16);
+  outline-offset: 2px;
+}
+
+/* Layout helpers */
+.card-row { display:flex; gap:0.5rem; align-items:center; justify-content:flex-end; flex-wrap:wrap; }
+.card { background: var(--mint); }
+.highlight { background: var(--mint); }
