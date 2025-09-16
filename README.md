@@ -1,30 +1,99 @@
-# Kitsu — URL Shortener (Frontend)
 
-## Overview
-A clean, minimal, high-end single-page React + Vite + Tailwind frontend for a URL shortening service named **Kitsu**.
+```
+  _____                _                 _ 
+ |  ___| __ ___  _ __ | |_ ___ _ __   __| |
+ | |_ | '__/ _ \| '_ \| __/ _ \ '_ \ / _` |
+ |  _|| | | (_) | | | | ||  __/ | | | (_| |
+ |_|  |_|  \___/|_| |_|\__\___|_| |_|\__,_|
+                                           
+       FRONTEND UI
+```
 
-Features:
-- Animated wordmark/logo (Framer Motion) on every page load
-- Layered drifting radial blobs and floating sakura petals (SVG + CSS)
-- Highlighted result box with copy-to-clipboard + toast
-- History saved to `localStorage` under key `shortHistory`
-- Stats & Delete actions per item (wired to backend API contract)
-- Keyboard accessible and mobile-first responsive layout
-- Thin black 1px border motif around sections and buttons
 
-## Run locally
-1. Copy `.env.example` to `.env` and edit `VITE_API_URL` if needed.
-2. `npm install`
-3. `npm run dev`
+<!-- Title Section -->
+<h1 align="center">🎨 Kitsu Frontend — React + Vite + Tailwind 🎨</h1>
 
-Default API base: `http://localhost:8080` (no trailing slash)
+<p align="center">
+  <img src="https://img.shields.io/badge/React-18.2.0-blue?style=for-the-badge&logo=react" />
+  <img src="https://img.shields.io/badge/Vite-5.0.0-ffde57?style=for-the-badge&logo=vite" />
+  <img src="https://img.shields.io/badge/TailwindCSS-3.4.17-teal?style=for-the-badge&logo=tailwindcss" />
+  <img src="https://img.shields.io/badge/Framer_Motion-animations-ff69b4?style=for-the-badge&logo=framer" />
+</p>
 
-## Notes / Where to change things
-- Palette: `src/styles/palette.js`
-- Animation timings: `src/config/animations.js`
-- Logo animation: `src/components/Logo.jsx`
-- Backend wiring: environment variable `VITE_API_URL` (see `.env.example`)
+<p align="center">
+  <i>A sleek, animated UI for shortening links, powered by React + Vite + Tailwind.</i>
+</p>
 
-## Mocking the backend (quick)
-If you don't have a backend, the UI will still work; it hits the configured endpoints. For local testing, consider running a simple mock server that follows the API contract described in the project brief.
+---
 
+## 🎬 Live UI Sneak Peek
+<p align="center">
+  <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdGQ4NjE1aGFnb2Nndml0cGtzbTdlMWk1M2lwcDJtODRxbzhidHFoOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xT0xeJpnrWC4XWblEk/giphy.gif" width="500" alt="Frontend demo"/>
+</p>
+
+---
+
+## ✨ Cool Features
+- 🎥 **Logo animations** with Framer Motion
+- 🌈 **Drifting blobs background** for soft ambience
+- 📋 **One-click copy** + toast notifications
+- 💾 **Local history** of shortened links with localStorage
+- 📱 **Responsive & mobile-first**
+
+---
+
+## ⚡ Quick Start
+
+```bash
+npm install
+npm run dev
+```
+
+Visit 👉 `http://localhost:5173`
+
+---
+
+## 📡 Backend Requirements
+Expects a backend with these endpoints:
+- `POST /shorten`
+- `GET /shorten/{code}`
+- `PUT /shorten/{code}`
+- `DELETE /shorten/{code}`
+- `GET /shorten/r/{code}`
+- `GET /shorten/{code}/stats`
+
+Set API base in `.env`:
+
+```env
+VITE_API_URL=http://localhost:8080
+```
+
+---
+
+## 📂 Folder Highlights
+```
+src/
+├── components/       # Reusable React components
+├── styles/           # Tailwind + custom theme
+├── config/           # Animation configs
+└── assets/           # Logos, icons, extras
+```
+
+---
+
+## 🌱 Roadmap
+- [ ] 📊 Stats UI with charts
+- [ ] 🌙 Dark/Light mode toggle
+- [ ] 🖼️ Custom theme selector
+- [ ] 🧩 PWA support (offline-first)
+
+---
+
+## 🤝 Contribution Guide
+- Keep PRs small and focused
+- Respect Tailwind utility-first philosophy
+- Add visual demos (GIFs/screens) for new features
+
+---
+
+<h3 align="center">💖 MIT License | Beautiful UI for Everyone 💖</h3>
