@@ -29,12 +29,6 @@
   <i>A sleek, animated UI for shortening links, powered by React + Vite + Tailwind.</i>
 </p>
 
----
-
-## 🎬 Live UI Sneak Peek
-<p align="center">
-  <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdGQ4NjE1aGFnb2Nndml0cGtzbTdlMWk1M2lwcDJtODRxbzhidHFoOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xT0xeJpnrWC4XWblEk/giphy.gif" width="500" alt="Frontend demo"/>
-</p>
 
 ---
 
