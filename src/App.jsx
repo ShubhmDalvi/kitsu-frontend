@@ -47,7 +47,7 @@ export default function App(){
           <HistoryList items={history} onDelete={removeFromHistory} onUpdate={setHistory} />
         </section>
 
-        <footer className="mt-6 text-xs text-[var(--ink)]/70 text-center">Built with ❤️ - <a href="https://github.com/ShubhmDalvi">Shubham</a> - <a href="https://github.com/ShubhmDalvi/kitsu">github.com/ShubhmDalvi/kitsu</a></footer>
+        <footer className="mt-6 text-xs text-[var(--ink)]/70 text-center">Built with ❤️ - <a href="https://github.com/ShubhmDalvi">Shubham Dalvi - github.com/ShubhmDalvi</a></footer>
       </main>
     </div>
   )
